@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">VT Garment Cycle Time Tracking System</string>
+
+    <!-- Text Button Main -->
+    <string name="line_balancing">Line Balancing</string>
+    <string name="gsd_analysis">GSD Analysis</string>
+    <string name="ok_ng_card">OK-NG Card</string>
+
+    <!-- Text data line balancing -->
+    <string name="text_location">Location</string>
+    <string name="text_customer">Customer</string>
+    <string name="text_line">Line</string>
+    <string name="text_style">Style</string>
+    <string name="text_sam">SAM</string>
+    <string name="text_otp">เป้า/ชม OTP 100%</string>
+
+</resources>

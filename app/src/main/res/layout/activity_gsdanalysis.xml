@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_gsdanalysis"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="softwareranger.co.th.vtgarmentcycletimetrackingsystem.GSDAnalysisActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_line_balancing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_balancing"
+            android:background="@color/colorBlueButton"
+            android:padding="1dp"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/button_gsd_analysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gsd_analysis"
+            android:background="@color/colorBlueButton"
+            android:textColor="@color/colorWhite"
+            android:padding="10dp"
+            android:layout_marginLeft="1dp"/>
+
+        <Button
+            android:id="@+id/button_ok_ng_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_ng_card"
+            android:background="@color/colorBlueButton"
+            android:textColor="@color/colorWhite"
+            android:padding="10dp"
+            android:layout_marginLeft="1dp"/>
+
+
+    </LinearLayout>
+</LinearLayout>
