@@ -6,31 +6,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GSDAnalysisActivity extends AppCompatActivity {
+public class OKNGCardActivity extends AppCompatActivity {
 
     private Button buttonLineBalancing, buttonGSDAnalysis, buttonOKNGCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gsdanalysis);
+        setContentView(R.layout.activity_okngcard);
 
         buttonLineBalancing = (Button) findViewById(R.id.button_line_balancing);
-        buttonOKNGCard = (Button) findViewById(R.id.button_ok_ng_card);
-        //buttonGSDAnalysis = (Button) findViewById(R.id.button_gsd_analysis);
+        buttonGSDAnalysis = (Button) findViewById(R.id.button_gsd_analysis);
 
         buttonLineBalancing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(GSDAnalysisActivity.this, LineBalancingActivity.class));
+                startActivity(new Intent(OKNGCardActivity.this, LineBalancingActivity.class));
                 finish();
             }
         });
 
-        buttonOKNGCard.setOnClickListener(new View.OnClickListener() {
+        buttonGSDAnalysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(GSDAnalysisActivity.this, OKNGCardActivity.class));
+                startActivity(new Intent(OKNGCardActivity.this, GSDAnalysisActivity.class));
                 finish();
             }
         });

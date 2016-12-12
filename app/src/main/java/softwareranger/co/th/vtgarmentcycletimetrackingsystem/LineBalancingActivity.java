@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class LineBalancingActivity extends AppCompatActivity {
 
-    private Spinner spinnerLocation, spinnerCustomer, spinnerLine;
+    private Spinner spinnerLocation, spinnerCustomer, spinnerLine, spinnerStyle;
     private Button buttonLineBalancing, buttonGSDAnalysis, buttonOKNGCard, buttonAdd, buttonFinish;
 
     private ArrayList<String> valueSet = new ArrayList<String>();
@@ -51,9 +51,11 @@ public class LineBalancingActivity extends AppCompatActivity {
         spinnerLocation = (Spinner) findViewById(R.id.spinner_location);
         spinnerCustomer = (Spinner) findViewById(R.id.spinner_customer);
         spinnerLine = (Spinner) findViewById(R.id.spinner_line);
+        spinnerStyle = (Spinner) findViewById(R.id.spinner_style);
 
         buttonLineBalancing = (Button) findViewById(R.id.button_line_balancing);
         buttonGSDAnalysis = (Button) findViewById(R.id.button_gsd_analysis);
+        buttonOKNGCard = (Button) findViewById(R.id.button_ok_ng_card);
         buttonAdd = (Button) findViewById(R.id.button_add);
         buttonFinish = (Button) findViewById(R.id.button_finish);
 
@@ -63,6 +65,15 @@ public class LineBalancingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LineBalancingActivity.this, GSDAnalysisActivity.class));
+                finish();
+            }
+        });
+
+        buttonOKNGCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LineBalancingActivity.this, OKNGCardActivity.class));
+                finish();
             }
         });
 
@@ -136,6 +147,10 @@ public class LineBalancingActivity extends AppCompatActivity {
         // Set value adapter customer
         ArrayAdapter<String> adapterLine = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,valueSet);
         spinnerLine.setAdapter(adapterLine);
+
+        // Set value adapter style
+        ArrayAdapter<String> adapterStyle = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,valueSet);
+        spinnerStyle.setAdapter(adapterLine);
 
         ArrayList<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(4f, 0));

@@ -11,478 +11,507 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <!-- 3 Button -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button_line_balancing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/line_balancing"
-                    android:background="@color/colorBlueButton"
-                    android:padding="1dp"
-                    android:textColor="@color/colorWhite"/>
-
-                <Button
-                    android:id="@+id/button_gsd_analysis"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gsd_analysis"
-                    android:background="@color/colorBlueButton"
-                    android:textColor="@color/colorWhite"
-                    android:padding="10dp"
-                    android:layout_marginLeft="1dp"/>
-
-                <Button
-                    android:id="@+id/button_ok_ng_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ok_ng_card"
-                    android:background="@color/colorBlueButton"
-                    android:textColor="@color/colorWhite"
-                    android:padding="10dp"
-                    android:layout_marginLeft="1dp"/>
-
-            </LinearLayout>
-
-            <!-- Part 1 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- 3 Button -->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingLeft="20dp"
-                    android:layout_weight="0.3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_location"/>
-
-                        <Spinner
-                            android:id="@+id/spinner_location"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:scrollbars="vertical">
-
-                        </Spinner>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_customer"/>
-
-                        <Spinner
-                            android:id="@+id/spinner_customer"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:scrollbars="vertical">
-
-                        </Spinner>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_line"/>
-
-                        <Spinner
-                            android:id="@+id/spinner_line"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:scrollbars="vertical">
-
-                        </Spinner>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_style"/>
-
-                        <EditText
-                            android:id="@+id/edittext_style"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content">
-
-                        </EditText>
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.4">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_sam"/>
-
-                        <EditText
-                            android:id="@+id/edittext_sam"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content">
-
-                        </EditText>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorSky"
-                            android:text="@string/text_otp"/>
-
-                        <EditText
-                            android:id="@+id/edittext_otp"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"/>
-
-                        <EditText
-                            android:id="@+id/edittext_otp_result"
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Part 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="@color/colorRed"
-                    android:text="Last Update : "/>
-
-                <EditText
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorRed"
-                    android:hint="16/08/2016 09:45"/>
-
-                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button_add"
-                        android:layout_width="100dp"
+                        android:id="@+id/button_line_balancing"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:text="Add"
-                        android:textSize="20dp"/>
+                        android:text="@string/line_balancing"
+                        android:background="@color/colorBlueButton"
+                        android:padding="1dp"
+                        android:textColor="@color/colorWhite"/>
 
-                </RelativeLayout>
+                    <Button
+                        android:id="@+id/button_gsd_analysis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gsd_analysis"
+                        android:background="@color/colorBlueButton"
+                        android:textColor="@color/colorWhite"
+                        android:padding="10dp"
+                        android:layout_marginLeft="1dp"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="15dp"
-                android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/button_ok_ng_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok_ng_card"
+                        android:background="@color/colorBlueButton"
+                        android:textColor="@color/colorWhite"
+                        android:padding="10dp"
+                        android:layout_marginLeft="1dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total Cycle Time"
-                    android:textColor="@color/colorRed"
-                    android:textSize="18dp"/>
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorRed"
-                    android:textSize="18dp"
-                    android:text="Cycle Time max(นาที/ตัว)"/>
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorRed"
-                    android:textSize="18dp"
-                    android:text="Man (นับจาก Record)"/>
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorRed"
-                    android:textSize="18dp"
-                    android:text="% balance"/>
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorGreen"
-                    android:textSize="18dp"
-                    android:text="Button neck (BN):"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal">
-
+                <!-- Part 1 -->
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.14">
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:layout_weight="0.3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_location"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical">
+
+                            </Spinner>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_customer"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_customer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical">
+
+                            </Spinner>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_line"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_line"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical">
+
+                            </Spinner>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_style"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical">
+
+                            </Spinner>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_sam"/>
+
+                            <EditText
+                                android:id="@+id/edittext_sam"
+                                android:layout_width="200dp"
+                                android:text="46.927"
+                                android:textColor="@color/colorSky"
+                                android:layout_height="wrap_content">
+
+                            </EditText>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorSky"
+                                android:text="@string/text_otp"/>
+
+                            <EditText
+                                android:id="@+id/edittext_otp"
+                                android:layout_width="50dp"
+                                android:text="60"
+                                android:textColor="@color/colorSky"
+                                android:layout_height="wrap_content"/>
+
+                            <EditText
+                                android:id="@+id/edittext_otp_result"
+                                android:layout_width="80dp"
+                                android:text="0.85"
+                                android:textColor="@color/colorRed"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+
+                <!-- Part 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
                         android:textSize="18dp"
-                        android:text="Position"/>
+                        android:textColor="@color/colorRed"
+                        android:text="Last Update : "/>
 
                     <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:hint="16/08/2016 09:45"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/button_add"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Add"
+                            android:textSize="20dp"/>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.14">
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Total Cycle Time"
                         android:textColor="@color/colorRed"
-                        android:textSize="18dp"
-                        android:text="Employee"/>
-
+                        android:textSize="18dp"/>
                     <EditText
                         android:layout_width="100dp"
+                        android:text="60"
+                        android:textColor="@color/colorRed"
                         android:layout_height="wrap_content" />
 
-                </LinearLayout>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18dp"
+                        android:text="Cycle Time max(นาที/ตัว)"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:text="1.0000"
+                        android:textColor="@color/colorRed"
+                        android:layout_height="wrap_content" />
 
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18dp"
+                        android:text="Man (นับจาก Record)"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:text="55"
+                        android:textColor="@color/colorRed"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18dp"
+                        android:text="% balance"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="87.9%"
+                        android:textColor="@color/colorRed"/>
+
+                </LinearLayout>
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.20">
+                    android:paddingLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="18dp"
+                        android:text="Button neck (BN):"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:textColor="@color/colorGreen"
-                            android:text="BN "/>
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.14">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorRed"
                             android:textSize="18dp"
-                            android:text="Out put (ตัว/ชม.)"/>
-
-                    </LinearLayout>
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.15">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="% "
-                            android:textColor="@color/colorRed"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="BN "
-                            android:textColor="@color/colorGreen"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="EFF"
-                            android:textColor="@color/colorRed"/>
-                    </LinearLayout>
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.21">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="% "
-                            android:textColor="@color/colorRed"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="BN "
-                            android:textColor="@color/colorGreen"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18dp"
-                            android:text="OTP"
-                            android:textColor="@color/colorRed"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                            android:text="Position"/>
 
                         <EditText
                             android:layout_width="100dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="P12"
+                            android:textColor="@color/colorRed"/>
 
-                        <Button
-                            android:id="@+id/button_finish"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Finish"
-                            android:textSize="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.14">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:textSize="18dp"
+                            android:text="Employee"/>
+
+                        <EditText
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="14736"
+                            android:textColor="@color/colorRed"/>
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.20">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorGreen"
+                                android:text="BN "/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorRed"
+                                android:textSize="18dp"
+                                android:text="Out put (ตัว/ชม.)"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="60"
+                            android:textColor="@color/colorRed"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.15">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="% "
+                                android:textColor="@color/colorRed"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="BN "
+                                android:textColor="@color/colorGreen"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="EFF"
+                                android:textColor="@color/colorRed"/>
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="79%"
+                            android:textColor="@color/colorRed"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.21">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="% "
+                                android:textColor="@color/colorRed"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="BN "
+                                android:textColor="@color/colorGreen"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="OTP"
+                                android:textColor="@color/colorRed"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="85%"
+                                android:textColor="@color/colorRed"/>
+
+                            <Button
+                                android:id="@+id/button_finish"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Finish"
+                                android:textSize="20dp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/chart"
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:background="#f4cda9"
-                android:layout_height="400dp" />
-
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:background="#f4cda9"
+                    android:layout_height="400dp" />
     </LinearLayout>
 </ScrollView>
